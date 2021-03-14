@@ -9,18 +9,15 @@
 <body>
     <?php 
     require_once('Account.php');
+    require_once('Driver.php');
     require_once('Car.php');
     require_once('UberX.php');
     require_once('UberPool.php');
 
-    $uberX = new UberX('VRC81D', new Account('Javier Potes', '93355322'), "Yahama", "YBR125");
-    $car = new Car('VRC81D', new Account('David Potes', '1006116326'));
-    $uberPool = new UberPool('QWERTY', new Account('Javier David', '1006116326'), "Nissan", "GTR");
+    $driver = new Driver("David Potes", "1006116326");
+    $uberX = new UberX("VRC81D", $driver, "Chevrolet", "Camaro RS");
 
-    
-    $car->printDataCar();
     $uberX->printDataCar();
-    $uberPool->printDataCar();
     
     
     ?>
