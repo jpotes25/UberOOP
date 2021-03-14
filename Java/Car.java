@@ -2,11 +2,14 @@ package Java;
 
 public class Car 
 {
+    // Atributes
 
     private Integer id;
     private String license;
     private Account driver;
     private Integer passengers;
+
+    // Constructor
 
     public Car(String license, Account driver)
     {
@@ -14,12 +17,7 @@ public class Car
         this.driver = driver;
     }
 
-
-    void printDataCar()
-    {
-        System.out.println("License: " + license + " Driver Name: " + driver.name);
-    }
-
+    // Getters & Setters
 
     public Integer getId() {
         return id;
@@ -60,5 +58,10 @@ public class Car
         this.passengers = passengers;
     }
 
-    
+    // Methods
+
+    void printDataCar()
+    {
+        System.out.println("License: " + license + " Driver Name: " + driver.getName());
+    }    
 }
